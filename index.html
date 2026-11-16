@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <canvas id="fx-canvas"></canvas>
   <!-- Navbar -->
   <nav class="navbar trade-navbar fixed-top">
     <div class="navbar-container">
@@ -222,11 +222,10 @@
             </div>
         </div>
     </section>
-
+    
     <!-- About -->
     <div class="about-scroll-section">
         <section id="about" class="about-section">
-            <canvas id="fx-canvas"></canvas>
             <script type="importmap">
             {
                 "imports": {
@@ -335,62 +334,144 @@
     </div>
 
   <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container">
-        <div class="row row-col-12">
-            <div class="card contact-card" style="width: 18rem;">
-                <img src="assets\Mohamed Elkazaz.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
+  <section id="contact" class="contact-section py-5">
+    <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+                }
+            }
+        </script>
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="contact-heading text-center">
+                <span class="contact-subtitle">GET IN TOUCH</span>
+                <h2>Contact Us</h2>
             </div>
-            <div class="card contact-card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-            <div class="card contact-card" style="width: 18rem;">
-                <img src="assets\Serdar Demirbilek.jpeg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-            <div class="card contact-card" style="width: 18rem;">
-                <img src="assets\Dr Kefah Karawani.jpeg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-        </div>
-      <h2 class="text-center mb-4">Contact Us</h2>
-      <form class="mx-auto" style="max-width: 500px;">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-dark w-100">Send</button>
-      </form>
-    </div>
-  </section>
+            <!-- Team Cards -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 contact-team">
+                <!-- Team Member 1 -->
+                <div class="col">
+                    <div class="contact-card">
+                        <img src="assets/Mohamed Elkazaz(920).jpg"
+                            class="contact-card-img"
+                            alt="Mohamed Elkazaz">
 
+                        <div class="contact-card-body">
+                            <h5>Mr. Mohamed Elkazaz - CEO</h5>
+                            <p>USA HEAD QUARTER OFFICE</p>
+                            <p>REGISTERED COMPANY NAME:MKS TRADE LLC-USA</p>
+                            <p>TEL: +1929-402-6990</p>
+                            <p>International line: +2010-1355-2742</p>
+                            <p>39 Franklin Ave, Garfield, NJ 07026- USA</p>
+                            <a href="#" class="contact-card-btn">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col">
+                    <div class="contact-card">
+                        <img src="assets/mks(920).jpg"
+                            class="contact-card-img"
+                            alt="Serdar Demirbilek">
+                            
+                        <div class="contact-card-body">
+                            <h5>Egypt Office</h5>
+                            <p>Registered Company Name:</p>
+                            <p>VIRGINIA TRADE INTERNATIONAL CO.</p>
+                            <p>Address: 313 Elemam Tawer -Kornish Elnile -Damietta-Egypt</p>
+                            <p>Mr. Mohamed Elkazaz - CEO.</p>
+                            <p>Land Line: +2057-2363-007</p>
+                            <p>V.P / Dr. Atif Dabba</p>
+                            <p>Tel: +20 102 0553443</p>
+                            <p>Petroleum Engineering - Mr. Basem Salem</p>
+                            <p>Tel: +20 114 2443988</p>
+                            <a href="#" class="contact-card-btn">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col">
+                    <div class="contact-card">
+                        <img src="assets/Serdar Demirbilek(92).jpg"
+                            class="contact-card-img"
+                            alt="Serdar Demirbilek">
+
+                        <div class="contact-card-body">
+                            <h5>İ. Serdar Demirbilek - Manager</h5>
+                            <p>TURKEY OFFICE</p>
+                            <p>Address: Azmimilli Mahallesi Serhat Sokak 10/A Merkez Düzce Türkiye</p>
+                            <p>Tel: +90 (532) 451 35 48</p>
+                            <a href="#" class="contact-card-btn">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col">
+                    <div class="contact-card">
+                        <img src="assets/Dr Kefah Karawani(920).jpg"
+                            class="contact-card-img"
+                            alt="Dr Kefah Karawani">
+
+                        <div class="contact-card-body">
+                            <h5>Dr Kefah Karawani - Manager</h5>
+                            <p>Dubai Office</p>
+                            <p>Office No: 402, Building 12</p>
+                            <p>Location: Bay Square, Business Bay</p>
+                            <p>PO. Box: 334430</p>
+                            <p>Phone: +971501844981</p>
+                            <a href="#" class="contact-card-btn">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="contact-form-heading">
+                    <span>HAVE A QUESTION?</span>
+                    <h3>Send Us a Message</h3>
+                </div>
+                <form class="contact-form mx-auto">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <input type="text"
+                                class="form-control"
+                                placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email"
+                                class="form-control"
+                                placeholder="Your Email"
+                                required>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="phone"
+                                class="form-control"
+                                placeholder="Phone number"
+                                required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control"
+                                    rows="5"
+                                    placeholder="Your Message"
+                                    required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="contact-submit-btn">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2026 MKS. All Rights Reserved</p>
   </footer>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="scripts.js"></script>
