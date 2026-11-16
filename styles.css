@@ -1,0 +1,894 @@
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+.trade-navbar {
+    direction: ltr;
+    top: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 90%;
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    transition: width 0.2s cubic-bezier(0.56, 0.02, 0.41, 1.07);
+}
+
+.trade-navbar.scrolled {
+    width: 50%;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    gap: clamp(10px, 2vw, 50px);
+}
+
+.nav-link {
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.language-buttons {
+    font-size: 20px;
+    display: flex;
+    margin-right: 5px;
+}
+
+.language-buttons button {
+    border: none;
+    padding: 7px 15px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.language-en {
+    background-color: red;
+    border-radius: 15px 0 0 15px;
+}
+
+.language-ar {
+    background-color: blue;
+    border-radius: 0 15px 15px 0;
+}
+
+.language-buttons.ar-selected .language-en {
+    background-color: blue;
+}
+
+.language-buttons.ar-selected .language-ar {
+    background-color: red;
+}
+
+.hero {
+    height: 100vh;
+}
+
+#HeroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.welcome-text{
+    font-size: 120px;
+    color: red;
+}
+
+.phrase-text {
+    font-size: 80px;
+}
+
+.hero-container .btn {
+    font-size: 30px;
+    padding: 12px 30px;
+    border-radius: 35px;
+    margin: 8px;
+    transition: background-color 0.4s ease-out,
+                color 0.4s ease-out,
+                border-color 0.4s ease-out;
+    color: white;
+    background-color: blue;
+}
+
+.hero-container .btn:hover {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+/* ============================= */
+/* Desktop - 1600px and below */
+/* ============================= */
+
+@media (max-width: 1600px) {
+    .trade-navbar {
+        width: 90%;
+    }
+
+    .trade-navbar.scrolled {
+        width: 60%;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        gap: clamp(10px, 4vw, 20px);
+    }
+    
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .language-buttons button {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    .welcome-text {
+        font-size: 80px;
+    }
+
+    .phrase-text {
+        font-size: 60px;
+    }
+
+    .hero-container .btn {
+        padding: 12px 30px;
+        font-size: 20px;
+        border-radius: 30px;
+        margin: 4px;
+    }
+}
+
+/* ============================= */
+/* Tablet and Small Desktop - 1200px and below */
+/* ============================= */
+
+@media (max-width: 1200px) {
+
+    .trade-navbar {
+        width: 90%;
+    }
+
+    .trade-navbar.scrolled {
+        width: 90%;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+
+    .language-buttons {
+        font-size: 20px;
+        margin-left: auto;
+    }
+
+    .navbar-toggler {
+        order: 3;
+        display: block !important;
+        margin: 0 5px 0 0;
+        border: none;
+        flex-shrink: 0;
+    }
+    
+    #navbarNav {
+        order: 4;
+    }
+
+    #navbarNav.collapse:not(.show) {
+        display: none !important
+    }
+
+    #navbarNav.collapse.show {
+        display: flex !important;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .nav-link {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+
+/* ============================= */
+/* Smaller Phones - 400px and below */
+/* ============================= */
+
+@media (max-width: 600px) {
+    .trade-navbar {
+        width: 90%;
+        top: 10px;
+    }
+
+    .trade-navbar.scrolled {
+        width: 90%;
+    }
+
+    .navbar-logo img {
+        width: 100px;
+    }
+
+    .language-buttons button {
+        padding: 8px 12px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .language-buttons button {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+}
+
+/* ============================= */
+/* SERVICES SECTION               */
+/* ============================= */
+
+.services-section {
+    height: 500vh;
+}
+
+.services-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ============================= */
+/* ARABIC TEXT DIRECTION         */
+/* ============================= */
+
+.services-section[dir="rtl"] .services-label {
+    right: 5%;
+}
+
+.services-section[dir="rtl"] .services-cards {
+    right: 5%;
+}
+
+/* ============================= */
+/* VIDEO                         */
+/* ============================= */
+
+.services-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+
+/* ============================= */
+/* SERVICES LABEL                */
+/* ============================= */
+
+.services-label {
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.services-label span {
+    width: 40px;
+    height: 2px;
+    background: red;
+}
+
+.services-label p {
+    margin: 0;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+/* ============================= */
+/* CARDS                         */
+/* ============================= */
+
+.services-cards {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    width: 70%;
+    max-width: 1100px;
+}
+
+.service-card {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card h2 {
+    font-size: 80px;
+    margin-bottom: 25px;
+    color: red;
+    font-size: clamp(40px, 5vw, 75px);
+    font-weight: 700;
+}
+
+.service-card p {
+    max-width: 750px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* =========================================== */
+/* Tablet and Small Desktop - 1200px and below */             
+/* =========================================== */
+
+@media (max-width: 1200px) {
+    .services-label span {
+        width: 20px;
+    }
+
+    .services-label p {
+        font-size: 15px;
+    }
+
+    .services-cards {
+        left: 8%;
+        width: 84%;
+    }
+
+    .services-label {
+        left: 8%;
+    }
+
+    .service-card h2 {
+        font-size: 60px;
+    }
+
+    .service-card p {
+        font-size: 15px;
+    }
+}
+
+/* ============================= */
+/* MOBILE                       */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .services-cards {
+        left: 8%;
+        width: 84%;
+    }
+
+    .services-label {
+        left: 8%;
+    }
+
+    .service-card h2 {
+        font-size: 40px;
+    }
+
+    .service-card p {
+        font-size: 15px;
+    }
+}
+
+/* ================================= */
+/* ABOUT SECTION                     */
+/* ================================= */
+
+.about-scroll-section {
+    height: 800vh;
+}
+
+.about-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+}
+
+#fx-canvas {
+    position: absolute;
+}
+
+/* ================================= */
+/* ABOUT VIDEO                       */
+/* ================================= */
+
+.About-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+
+/* ================================= */
+/* CARD                              */
+/* ================================= */
+
+.about-section .card {
+    text-align: center;
+    width: 90%;
+    max-width: 1800px;
+    min-height: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    overflow: hidden;
+    animation: aboutCardGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes aboutCardGlow {
+        0%, 100% {
+            box-shadow:
+                0 0 100px rgb(255, 255, 250),
+                0 0 240px rgba(249, 249, 250, 0.460),
+                0 0 480px rgba(251, 251, 252, 0.370);
+        }
+
+        50% {
+            box-shadow:
+                0 0 70px rgba(247, 247, 248, 0.45),
+                0 0 260px rgba(240, 240, 243, 0.3),
+                0 0 320px rgba(250, 250, 250, 0.18);
+        }
+}
+
+/* ================================= */
+/* ABOUT TITLE                       */
+/* ================================= */
+
+.about-content h2 {
+    position: absolute;
+    left: 50%;
+    font-size: clamp(100px, 12vw, 200px);
+    font-weight: 700;
+    color: red;
+    white-space: nowrap;
+}
+
+/* ================================= */
+/* ABOUT CARDS CONTAINER             */
+/* ================================= */
+
+.about-cards {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: min(1100px, 90%);
+    min-height: 300px;
+    transform: translateX(-50%);
+}
+
+/* ================================= */
+/* INDIVIDUAL ABOUT CARDS            */
+/* ================================= */
+
+/* Correct Arabic text direction inside About cards */
+html[dir="rtl"] .about-card,
+html[dir="rtl"] .about-card p {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: plaintext;
+}
+
+/* Keep English text left-to-right */
+html[dir="ltr"] .about-card,
+html[dir="ltr"] .about-card p {
+    direction: ltr;
+    text-align: center;
+}
+
+/* Arabic paragraph direction */
+.about-section[dir="rtl"] .about-card p {
+    text-align: center;
+    direction: rtl;
+    unicode-bidi: plaintext;
+}
+
+/* English company names inside Arabic paragraphs */
+.about-section[dir="rtl"] .about-card p .latin-word {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline;
+}
+
+/* Preserve the word reveal colors */
+.about-card p .word {
+    color: #454545;
+}
+
+.about-card p .word.revealed {
+    color: #fff;
+}
+
+.about-card {
+    position: absolute;
+    padding: 35px;
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(45px);
+    transition:
+        opacity 0.4s ease-in-out,
+        transform 0.4s ease-in-out,
+        visibility 0.4s ease-in-out;
+}
+
+.about-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Card heading */
+.about-card h3 {
+    text-align: center;
+    margin: 0 0 20px;
+    color: blue;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Card paragraph */
+.about-card p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* =================================
+   ABOUT HORIZONTAL TIMELINE
+================================= */
+
+.about-timeline {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: min(1500px, 75%);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.about-timeline.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.timeline-track {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.timeline-progress {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.timeline-point {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-point-start {
+    left: 0%;
+}
+
+.timeline-point-end {
+    left: 100%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #111;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+    transition:
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.8s ease,
+        transform 0.5s ease;
+}
+
+.timeline-year {
+    position: absolute;
+    bottom: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Start point glows when the timeline appears */
+.timeline-point-start .timeline-dot.glowing,
+.timeline-point-end .timeline-dot.glowing {
+    background: #fff;
+    border-color: #fff;
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.6);
+
+    animation: timelinePointGlow 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes timelinePointGlow {
+    from {
+        box-shadow:
+            0 0 6px rgba(255, 255, 255, 0.6),
+            0 0 14px rgba(255, 255, 255, 0.4),
+            0 0 25px rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        box-shadow:
+            0 0 12px rgba(255, 255, 255, 1),
+            0 0 28px rgba(255, 255, 255, 0.9),
+            0 0 50px rgba(255, 255, 255, 0.7);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* ================================= */
+/* ABOUT SECTION - 1600px and below */
+/* ================================= */
+
+@media (max-width: 1600px) {
+
+    .about-section .card {
+        width: 94%;
+        min-height: 0;
+        height: 94vh;
+    }
+
+    .about-content h2 {
+        font-size: clamp(90px, 11vw, 160px);
+    }
+
+    .about-cards {
+        width: min(1000px, 88%);
+        top: 54%;
+    }
+
+    .about-card {
+        padding: 30px;
+        border-radius: 25px;
+    }
+
+    .about-card h3 {
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+
+    .about-card p {
+        font-size: 19px;
+        line-height: 1.7;
+    }
+
+    .about-timeline {
+        width: min(1200px, 78%);
+        top: 94%;
+    }
+
+    .timeline-year {
+        font-size: 18px;
+    }
+}
+
+/* ================================= */
+/* ABOUT SECTION - 1200px and below */
+/* ================================= */
+
+@media (max-width: 1200px) {
+
+    .about-section .card {
+        width: 95%;
+        height: 92vh;
+        min-height: 0;
+        border-radius: 35px;
+    }
+
+    .about-content h2 {
+        font-size: clamp(75px, 11vw, 125px);
+    }
+
+    .about-cards {
+        width: 88%;
+        top: 53%;
+        min-height: 260px;
+    }
+
+    .about-card {
+        padding: 25px;
+        border-radius: 22px;
+        backdrop-filter: blur(20px);
+    }
+
+    .about-card h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .about-card p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .about-timeline {
+        width: 80%;
+        top: 93%;
+    }
+
+    .timeline-track {
+        height: 3px;
+    }
+
+    .timeline-dot {
+        width: 11px;
+        height: 11px;
+    }
+
+    .timeline-year {
+        font-size: 16px;
+        letter-spacing: 1px;
+        bottom: 13px;
+    }
+}
+
+/* ================================= */
+/* ABOUT SECTION - 800px and below */
+/* ================================= */
+
+@media (max-width: 800px) {
+
+    .about-scroll-section {
+        height: 800vh;
+    }
+
+    .about-section {
+        height: 100vh;
+    }
+
+    .about-section .card {
+        width: 96%;
+        height: 90vh;
+        min-height: 0;
+        border-radius: 25px;
+    }
+
+    .About-video {
+        object-position: center;
+    }
+
+    /* Main title */
+    .about-content h2 {
+        top : 200px;
+        font-size: clamp(55px, 12vw, 90px);
+        white-space: nowrap;
+    }
+
+    /* Cards container */
+    .about-cards {
+        width: 92%;
+        top: 35%;
+        min-height: 280px;
+    }
+
+    /* Individual cards */
+    .about-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+        backdrop-filter: blur(15px);
+    }
+
+    .about-card h3 {
+        font-size: clamp(22px, 4vw, 28px);
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .about-card p {
+        font-size: clamp(14px, 2.2vw, 16px);
+        line-height: 1.55;
+    }
+
+    /* Timeline */
+    .about-timeline {
+        width: 78%;
+        top: 97%;
+        
+    }
+
+    .timeline-track {
+        height: 2px;
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-year {
+        font-size: 14px;
+        letter-spacing: 1px;
+        bottom: 5px;
+    }
+}

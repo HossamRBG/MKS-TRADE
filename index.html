@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MKS TRADE LLC</title>
+  <!-- Bootstrap CSS -->
+  <link rel="icon" href="assets\Icon.webp" sizes="192x192">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar trade-navbar fixed-top">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#home" class="navbar-logo">
+            <img href="#home" src="assets/MKS Trade (PNG).png" width="150">
+        </a>
+        <!-- Mobile button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link nav-red"
+                    href="#home"
+                    data-en="Home"
+                    data-ar="الرئيسية">
+                      Home
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link nav-blue"
+                    href="#services"
+                    data-en="Services"
+                    data-ar="الخدمات">
+                      Services
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link nav-red"
+                    href="#about"
+                    data-en="About"
+                    data-ar="من نحن">
+                      About
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link nav-blue"
+                    href="#contact"
+                    data-en="Contact"
+                    data-ar="تواصل معنا">
+                      Contact
+                  </a>
+              </li>
+          </ul>
+        </div>
+        <!-- Language buttons -->
+        <div class="language-buttons">
+            <button class="language-en active">EN</button>
+            <button class="language-ar">AR</button>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero text-center">
+    <video src="assets/background videos (1).mp4" id="HeroVideo" autoplay muted loop playsinline></video>
+    <div class="hero-container">
+        <p class="welcome-text fw-bolder"
+          data-en="Welcome"
+          data-ar="مرحباً">
+            Welcome
+        </p>
+        <p class="phrase-text text-white fs-6"
+          data-en="MKS TRADE LLC is a global leader in scrap metal processing and steel supply, known for competitive pricing, customer service, and innovative solutions."
+          data-ar=".شركة رائدة في معالجة الخردة المعدنية وتوريد الصلب، وهي معروفة بأسعارها التنافسية وخدمة العملاء والحلول المبتكرة">
+            MKS TRADE LLC is a leader in scrap metal processing and steel supply, known for competitive pricing, customer service, and innovative solutions.
+        </p>
+        <button class="btn btn-lg"
+                onclick="showMessage()"
+                data-en="Contact us"
+                data-ar="تواصل معنا">
+            Contact us
+        </button>
+        <button class="btn btn-lg"
+                onclick="showMessage()"
+                data-en="About us"
+                data-ar="من نحن">
+            About us
+        </button>
+    </div>
+  </section>
+
+    <!-- Services -->
+    <section id="services" class="services-section" dir="ltr">
+        <div class="services-sticky">
+            <!-- Background Video -->
+            <video id="servicesVideo" class="services-video" src="assets/our Services section video (1).mp4" playsinline preload="auto"></video>
+
+            <!-- Services content -->
+            <div class="services-content">
+                <div class="services-label">
+                    <span></span>
+                    <p data-en="OUR SERVICES" data-ar="خدماتنا">
+                        OUR SERVICES
+                    </p>
+                </div>
+                <div class="services-cards">
+                    <!-- Card 1 -->
+                    <div class="service-card active">
+                        <h2 data-en="Global Aluminum Solutions"
+                            data-ar="حلول الألومنيوم العالمية">
+                            Global Aluminum Solutions
+                        </h2>
+                        <p data-en="MKS market teams deliver fast, professional service with both technical and commercial expertise. We secure and supply primary aluminum worldwide in diverse shapes and qualities."
+                        data-ar="تقدم فرق التسويق في MKS خدمة سريعة واحترافية تجمع بين الخبرة الفنية والتجارية. كما نعمل على توفير وتوريد الألومنيوم الأولي حول العالم بمختلف الأشكال والمواصفات.">
+                            <span class="english-text">MKS</span> market teams deliver fast, professional service
+                            with both technical and commercial expertise.
+                            We secure and supply primary aluminum worldwide
+                            in diverse shapes and qualities.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-card">
+                        <h2 data-en="Global Energy & Trade Partnerships"
+                            data-ar="شراكات الطاقة والتجارة العالمية">
+                            Global Energy & Trade Partnerships
+                        </h2>
+                        <p data-en="MKS TRADE LLC operates in the USA with its sister company, Virginia Trade International Co., based in Egypt. We deliver high-quality fuel products worldwide."
+                        data-ar="تعمل شركة MKS TRADE LLC في الولايات المتحدة الأمريكية بالتعاون مع شركتها الشقيقة Virginia Trade International Co. ومقرها في مصر. ونوفر منتجات وقود عالية الجودة في الأسواق العالمية.">
+                            <span class="english-text">MKS TRADE LLC</span> operates in the USA with its sister
+                            company, <span class="english-text">Virginia Trade International Co.</span>, based
+                            in Egypt. We deliver high-quality fuel products
+                            worldwide.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-card">
+
+                        <h2 data-en="Visionary Leadership & Global Presence"
+                            data-ar="القيادة الطموحة والحضور العالمي">
+                            Visionary Leadership & Global Presence
+                        </h2>
+
+                        <p data-en="Under CEO Mr. Mohamed Elkazaz, MKS TRADE LLC has built a strong local and international footprint. Our focus on excellence ensures reliable services and superior products."
+                        data-ar="تحت قيادة الرئيس التنفيذي السيد محمد القزاز، نجحت MKS TRADE LLC في بناء حضور قوي على المستويين المحلي والدولي. ونركز على التميز لضمان خدمات موثوقة ومنتجات عالية الجودة.">
+                            Under CEO Mr. Mohamed Elkazaz, <span class="english-text">MKS TRADE LLC</span>
+                            has built a strong local and international footprint.
+                            Our focus on excellence ensures reliable services
+                            and superior products.
+                        </p>
+
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="service-card">
+                        <h2 data-en="Trusted Partner in Energy Trading"
+                            data-ar="شريك موثوق في تجارة الطاقة">
+                            Trusted Partner in Energy Trading
+                        </h2>
+                        <p data-en="MKS TRADE LLC and Virginia Trade International Co. specialize in global energy trading, ensuring smooth, efficient transactions and reliable delivery."
+                        data-ar="تتخصص MKS TRADE LLC وشركة Virginia Trade International Co. في تجارة الطاقة على المستوى العالمي، مع ضمان معاملات سلسة وفعالة وتسليم موثوق للمنتجات.">
+                            <span class="english-text">MKS TRADE LLC</span> and <span class="english-text">Virginia Trade International Co.</span>
+                            specialize in global energy trading, ensuring smooth,
+                            efficient transactions and reliable delivery.
+                        </p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="service-card">
+                        <h2 data-en="Fuel & Innovation at MKS TRADE LLC"
+                            data-ar="الوقود والابتكار في MKS TRADE LLC">
+                            Fuel & Innovation at <span class="english-text">MKS TRADE LLC</span>
+                        </h2>
+                        <p data-en="MKS TRADE LLC specializes in high-quality fuel solutions worldwide while continuously exploring innovative opportunities."
+                        data-ar="تتخصص MKS TRADE LLC في تقديم حلول وقود عالية الجودة في الأسواق العالمية، مع مواصلة استكشاف فرص مبتكرة جديدة.">
+                            <span class="english-text">MKS TRADE LLC</span> specializes in high-quality fuel
+                            solutions worldwide while continuously exploring
+                            innovative opportunities.
+                        </p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="service-card">
+                        <h2 data-en="Fuel Trading & Digital Innovation"
+                            data-ar="تجارة الوقود والابتكار الرقمي">
+                            Fuel Trading & Digital Innovation
+                        </h2>
+                        <p data-en="We provide seamless and efficient fuel transactions with competitive pricing and exceptional service across global energy markets."
+                        data-ar="نقدم معاملات وقود سلسة وفعالة بأسعار تنافسية وخدمة متميزة في أسواق الطاقة العالمية.">
+                            We provide seamless and efficient fuel transactions
+                            with competitive pricing and exceptional service
+                            across global energy markets.
+                        </p>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="service-card">
+
+                        <h2 data-en="Energy Solutions & Digital Innovation"
+                            data-ar="حلول الطاقة والابتكار الرقمي">
+                            Energy Solutions & Digital Innovation
+                        </h2>
+                        <p data-en="MKS TRADE LLC combines traditional energy solutions with innovative technologies to create new opportunities in global markets."
+                        data-ar="تجمع MKS TRADE LLC بين حلول الطاقة التقليدية والتقنيات المبتكرة لخلق فرص جديدة في الأسواق العالمية.">
+                            <span class="english-text">MKS TRADE LLC</span> combines traditional energy solutions
+                            with innovative technologies to create new
+                            opportunities in global markets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <div class="about-scroll-section">
+        <section id="about" class="about-section">
+            <canvas id="fx-canvas"></canvas>
+            <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+                }
+            }
+            </script>
+            <div class="card">
+                <video
+                    id="AboutVideo"
+                    class="About-video"
+                    src="assets/our Services section video (3).mp4"
+                    muted
+                    playsinline
+                    preload="auto">
+                </video>
+                <div class="about-content">
+                    <!-- Main Title -->
+                    <h2
+                        data-en="About Us"
+                        data-ar="من نحن؟">
+                        About Us
+                    </h2>
+                    <!-- About Cards -->
+                    <div class="about-cards">
+                        <!-- Card 1 -->
+                        <div class="about-card">
+                            <p data-en="MKS TRADE LLC has grown into one of the largest processors and marketers of ferrous & non-ferrous scrap metal and a leading supplier of prime and secondary steel products by providing the highest level of customer service, leveraging its marketing expertise to offer competitive pricing and being creative in finding solutions for its customers’ needs."
+                            data-ar="تطورت شركة MKS TRADE LLC لتصبح واحدة من أكبر الشركات المتخصصة في معالجة وتسويق خردة المعادن الحديدية وغير الحديدية، ومن الشركات الرائدة في توريد منتجات الصلب الأولية والثانوية. وقد تحقق ذلك من خلال تقديم أعلى مستويات خدمة العملاء، والاستفادة من خبراتها التسويقية لتوفير أسعار تنافسية، وابتكار حلول تلبي احتياجات عملائها.">
+                                MKS TRADE LLC has grown into one of the largest processors and marketers of ferrous & non-ferrous scrap metal and a leading supplier of prime and secondary steel products by providing the highest level of customer service, leveraging its marketing expertise to offer competitive pricing and being creative in finding solutions for its customers’ needs.
+                            </p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="about-card">
+                            <h3 data-en="How we can help you?"
+                                data-ar="كيف يمكننا مساعدتك؟">How we can help you?</h3>
+                            <p data-en="MKS market teams provide fast and professional customer service having competency within technical and commercial areas. We secure primary aluminum for remelting on the global market and we can supply you with primary aluminum in various shapes and qualities worldwide. Our product portfolio ranges from standard ingots, T-bars or low-profile sows. Our regional market teams, who have market-related competencies, provide you with fast and professional service."
+                            data-ar="تقدم فرق الأسواق في MKS خدمة عملاء سريعة واحترافية، بفضل خبراتها الفنية والتجارية. ونعمل على توفير الألومنيوم الأولي المخصص لإعادة الصهر في الأسواق العالمية، كما نوفر الألومنيوم الأولي بمختلف الأشكال والدرجات والجودات في جميع أنحاء العالم. تشمل مجموعة منتجاتنا السبائك القياسية، وقضبان T، وكتل الألومنيوم منخفضة الارتفاع. وتوفر فرق الأسواق الإقليمية لدينا، بفضل خبرتها بالأسواق، خدمة سريعة واحترافية لعملائنا.">
+                                MKS market teams provide fast and professional customer service having competency within technical and commercial areas. We secure primary aluminum for remelting on the global market and we can supply you with primary aluminum in various shapes and qualities worldwide. Our product portfolio ranges from standard ingots, T-bars or low-profile sows. Our regional market teams, who have market-related competencies, provide you with fast and professional service.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="about-card">
+                            <h3 data-en="Our Mission in 2010"
+                                data-ar="رسالتنا في عام 2010">Our Mission in 2010</h3>
+
+                            <p data-en="At MKS TRADE LLC, we are committed to delivering high-quality ferrous and non-ferrous metals, primary aluminum, and steel products to global markets. Through our extensive network spanning over 120 countries and 20 years of expertise, we provide safe, efficient, and competitive trading solutions. With a focus on customer satisfaction, sustainability, and continuous growth, we empower businesses by facilitating seamless international trade and logistics."
+                            data-ar="في MKS TRADE LLC، نلتزم بتوفير معادن حديدية وغير حديدية عالية الجودة، والألومنيوم الأولي، ومنتجات الصلب للأسواق العالمية. ومن خلال شبكتنا الواسعة التي تمتد إلى أكثر من 120 دولة وخبرتنا التي تزيد على 20 عامًا، نقدم حلولًا تجارية آمنة وفعالة وتنافسية. ونركز على رضا العملاء والاستدامة والنمو المستمر، وندعم الشركات من خلال تسهيل التجارة الدولية والخدمات اللوجستية بسلاسة.">
+                                At MKS TRADE LLC, we are committed to delivering high-quality ferrous and non-ferrous metals, primary aluminum, and steel products to global markets. Through our extensive network spanning over 120 countries and 20 years of expertise, we provide safe, efficient, and competitive trading solutions. With a focus on customer satisfaction, sustainability, and continuous growth, we empower businesses by facilitating seamless international trade and logistics.
+                            </p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="about-card">
+                            <h3 data-en="Our Vision in 2010"
+                                data-ar="رؤيتنا في عام 2010">Our Vision in 2010</h3>
+
+                            <p data-en="To be the global leader in the trade and processing of ferrous and non-ferrous metals, providing innovative solutions and unmatched customer service while fostering sustainable and profitable growth for our partners worldwide."
+                            data-ar="أن نصبح الشركة الرائدة عالميًا في تجارة ومعالجة المعادن الحديدية وغير الحديدية، من خلال تقديم حلول مبتكرة وخدمة عملاء استثنائية، مع دعم النمو المستدام والمربح لشركائنا في جميع أنحاء العالم.">
+                                To be the global leader in the trade and processing of ferrous and non-ferrous metals, providing innovative solutions and unmatched customer service while fostering sustainable and profitable growth for our partners worldwide.
+                            </p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="about-card">
+                            <h3 data-en="Our Mission in 2020"
+                                data-ar="رسالتنا في عام 2020">Our Mission in 2020</h3>
+
+                            <p data-en="MKS TRADE LLC strives to be the trusted partner in the global metal and steel industry by leveraging our extensive network, market expertise, and commitment to quality. We provide reliable sourcing, competitive pricing, and efficient logistics, ensuring seamless trade experiences for our customers across diverse international markets."
+                            data-ar="تسعى MKS TRADE LLC إلى أن تكون الشريك الموثوق به في صناعة المعادن والصلب العالمية، من خلال الاستفادة من شبكتنا الواسعة وخبراتنا في الأسواق والتزامنا بالجودة. ونوفر مصادر توريد موثوقة وأسعارًا تنافسية وخدمات لوجستية فعالة، لضمان تجربة تجارية سلسة لعملائنا في مختلف الأسواق الدولية.">
+                                MKS TRADE LLC strives to be the trusted partner in the global metal and steel industry by leveraging our extensive network, market expertise, and commitment to quality. We provide reliable sourcing, competitive pricing, and efficient logistics, ensuring seamless trade experiences for our customers across diverse international markets.
+                            </p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="about-card">
+                            <h3 data-en="Our Vision in 2020"
+                                data-ar="رؤيتنا في عام 2020">Our Vision in 2020</h3>
+
+                            <p data-en="To redefine global metal trade by providing seamless, innovative, and sustainable solutions that connect markets and empower businesses worldwide."
+                            data-ar="إعادة صياغة مفهوم تجارة المعادن عالميًا من خلال تقديم حلول متكاملة ومبتكرة ومستدامة تربط بين الأسواق وتمكّن الشركات في جميع أنحاء العالم.">
+                                To redefine global metal trade by providing seamless, innovative, and sustainable solutions that connect markets and empower businesses worldwide.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Horizontal Timeline -->
+                    <div class="about-timeline">
+                        <div class="timeline-track">
+                            <div class="timeline-progress"></div>
+
+                            <div class="timeline-point timeline-point-start">
+                                <span class="timeline-year">2010</span>
+                                <span class="timeline-dot"></span>
+                            </div>
+
+                            <div class="timeline-point timeline-point-end">
+                                <span class="timeline-year">2020</span>
+                                <span class="timeline-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+        <div class="row row-col-12">
+            <div class="card contact-card" style="width: 18rem;">
+                <img src="assets\Mohamed Elkazaz.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+            <div class="card contact-card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+            <div class="card contact-card" style="width: 18rem;">
+                <img src="assets\Serdar Demirbilek.jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+            <div class="card contact-card" style="width: 18rem;">
+                <img src="assets\Dr Kefah Karawani.jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+        </div>
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark w-100">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2026 MKS. All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>
