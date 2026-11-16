@@ -276,8 +276,39 @@ async function main() {
     loadText('./shaders/display.frag'),
   ]);
 
-  const canvas = document.getElementById('fx-canvas');
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true });
+    const canvas = document.getElementById('fx-canvas');
+    document.body.appendChild(canvas);
+
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: false,
+        alpha: true
+    });
+    
+    // Show the fluid effect only in About and Contact.
+    const fluidSections = document.querySelectorAll(
+        ".about-section, .contact-section"
+    );
+
+    const fluidObserver = new IntersectionObserver(() => {
+
+        const fluidSectionVisible = Array.from(fluidSections).some(section => {
+
+            const rect = section.getBoundingClientRect();
+
+            return rect.top < window.innerHeight && rect.bottom > 0;
+
+        });
+
+        canvas.style.opacity = fluidSectionVisible ? "1" : "0";
+
+    }, {
+        threshold: 0
+    });
+
+    fluidSections.forEach(section => {
+        fluidObserver.observe(section);
+    });
   renderer.autoClear = false;
 
   function resize() {
